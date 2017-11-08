@@ -1,0 +1,107 @@
+.form-section
+  padding: 100px 0 110px 0
+  color: #fff
+  background-color: $form
+
+  .title
+    margin-bottom: 12px
+
+  .title__header
+    font-size: 2.25rem
+
+  .title__text
+    font-size: 1.25rem
+
+  .btn-down
+    position: relative
+    margin: auto auto 42px auto
+    width: 65px
+    height: 65px
+    border: 2px solid #fff
+    border-radius: 50%
+
+  .arrow-down
+    @include centerer-xy
+
+    .mdi
+      font-size: 2.5rem
+
+.form
+  position: relative
+  width: 67%
+  margin: auto
+  padding: 50px 50px 66px 50px
+  border-radius: 3px
+  color: #828282
+  text-align: center
+  background: #fff
+
+  .-container
+    padding-top: 30px
+
+  &:before
+    @include centerer-x()
+
+    content: ''
+    border: 30px solid transparent
+    border-bottom: 30px solid #FFFFFF
+    top: -59px
+
+  &__close-button
+    position: absolute
+    right: -16px
+    top: -22px
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    border: 2px solid #FFFFFF
+    text-align: center
+    font-size: 2rem
+    color: #FFFFFF
+    background: $accent
+    transition: 0.3s
+
+    &:hover
+      background: lighten($accent, 10%)
+
+  &--text
+    margin-bottom: 33px
+    font-size: 0.9375rem
+    line-height: 1.5
+
+  &__fields
+    margin-bottom: 50px
+
+  &__input
+    width: 70%
+    display: block
+    margin: auto auto 8px auto
+    padding: 10px 20px
+    border: 1px solid #d8d8d8
+    border-radius: 3px
+    font-size: 0.875rem
+
+    &:focus
+      box-shadow: 0 0 8px 1px rgba(0,0,0,0.5)
+
+
+  .botton
+    padding: 15px 30px
+    border: none
+
+
+
+    .--red
+
+
+      padding-top: 20px
+      &:hover
+      background: lighten($accent, 10%)
+
+
+
+
+
+

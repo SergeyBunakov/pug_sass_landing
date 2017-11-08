@@ -1,0 +1,27 @@
+mixin header()
+	header.header
+		.header__top
+			.container
+				.contacts
+					a.contact(href="tel: +380-67-000-0000")
+						i.mdi.mdi-cellphone.contact__icon.contact__icon--phone
+						span.contact__text tel: +380-67-000-0000
+
+					a.contact(href="mailto: infocom@gmail.com")
+						i.mdi.mdi-email.contact__icon.contact__icon--email
+						span.contact__text infocom@gmail.com
+
+					a.facebook-icon(href="facebook.com")
+						i.mdi.mdi-facebook
+			.container
+				.header__bottom
+					.logo: img.logo__picture(src="img/logo.png" alt="picture")
+					nav.nav
+						- var items = ["Home", "About US", "Our Approch", "Our Work"]
+						each item in items
+							if item === 'Home'
+								a.nav__link.nav__link--active(href="#")= item
+							else
+								a.nav__link(href="#")= item
+					a.button.header__button.button--red(href="#") Free Consultation
+

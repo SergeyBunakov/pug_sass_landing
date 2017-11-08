@@ -1,0 +1,20 @@
+{
+  "name": "pug_bem_sass",
+  "description": "pug_bem_sass",
+  "main": "index.js",
+  "authors": [
+    "Sergey Bunakov"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mdi": "2.0.46"
+  }
+}

@@ -1,0 +1,96 @@
+@mixin circle($size, $color)
+  width: $size
+  height: $size
+  background-color: $color
+  border-radius: $size/2
+
+  //  selector {
+        @include circle($size, $color);
+      }
+
+@mixin triangle($width, $direction, $color)
+  width: 0
+  height: 0
+  @if $direction == up
+    border-left: $width solid transparent
+    border-right: $width solid transparent
+    border-bottom: $width solid $color
+
+  @if $direction == down
+    border-left: $width solid transparent
+    border-right: $width solid transparent
+    border-top: $width solid $color
+
+  @if $direction == left
+    border-top: $width solid transparent
+    border-bottom: $width solid transparent
+    border-right: $width solid $color
+
+  @if $direction == rigth
+    border-left: $width solid transparent
+    border-bottom: $width solid transparent
+    border-left: $width solid $color
+
+
+//    selector {
+        @include triangle($width, $direction, $color);
+      }
+
+
+@mixin centerer()
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50% -50%)
+
+@mixin vertical-centerer()
+  position: absolute
+  top: 50%
+  transform: translate(-50%)
+
+@mixin horizontal-centerer()
+  position: absolute
+  left: 50%
+  transform: translate(-50%)
+
+//  selector {
+      @include centerer;
+      width: $size;
+      height: $size;
+      background: $color;
+   }
+
+@mixin placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &::-moz-input-placeholder
+    color: $color
+  &::-ms-input-placeholder
+    color: $color
+  &::input-placeholder
+    color: $color
+
+    // input {
+        @include placeholder(&color);
+      }
+
+@mixin font($size, $font, $color)
+  font-family: $font
+  $font-size: $size
+  line-height: 1.2
+  color: $color
+
+  // selector {
+      @include font($size, $font, $color
+    }
+
+@mixin link()
+  background: $color
+  color: $colr
+  padding: $size
+  display: inline-block
+  text-decoration: none
+  transition: 0.3s
+
+  a:hover
+    background: function($color, transparent)

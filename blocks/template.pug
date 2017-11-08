@@ -1,0 +1,55 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include about/about
+include approch/approch
+include work/work
+include form/form
+include footer/footer
+
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "PUG_LANDING_SASS",
+				"author": "Sergey Bunakov",
+				"description": "PUG_LANDING_SASS"
+			})
+
+		body
+			block header
+				+header()
+
+			block hero
+				+hero()
+
+			block about
+				+about()
+
+			block approch
+				+approch()
+
+			block work
+				+work()
+
+			block form
+				+form()
+
+			block footer
+				footer
+					+footer()
+
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js")
+				// endbuild
+
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild
